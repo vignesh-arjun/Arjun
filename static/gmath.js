@@ -19,7 +19,7 @@ function saveaddress() {
 function sendDataToServer(data) {
     // Use fetch to send data to the server
     // For simplicity, let's assume the server is running on localhost:5000
-    fetch('http://localhost:5000/submit', {
+    fetch('http://localhost:5000', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

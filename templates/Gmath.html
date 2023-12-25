@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <title>Om Kandhaguru Jwellary</title>
@@ -7,35 +8,65 @@
         #PhoneNumber {
             margin-left: 9px;
         }
+
         #Address {
             margin-left: 51px;
         }
     </style>
 </head>
+
 <body>
 
     <p style="height: 18px">
         Om Kandhaguru Jwellary</p>
-     <form id="CustomerDetails">
-      <label for="CustomerName">Customer Name:</label>
-      <input type="text" id="CustomerName" name="CustomerName" required>
-      <br>
+    <p style="height: 18px">
+        ---------------------------------------------</p>
+    <p style="height: 18px">
+        1. Customer details</p>
+    <p style="height: 18px">
+        <label for="Date">Date:</label>
+        <input type="date">
+    </p>
+    <form id="Customer_Details">
+        <label for="CustomerName">Customer Name:</label>
+        <input type="text" id="CustomerName" name="CustomerName" required>
+        <br>
 
-      <label for="PhoneNumber">Phone Number:</label>
-      <input type="tel" id="PhoneNumber" name="PhoneNumber" required>
-      <!-- Using type="tel" for phone numbers -->
-      <br>
+        <label for="PhoneNumber">Phone Number:</label>
+        <input type="number" id="PhoneNumber" name="PhoneNumber" required>
+        <br>
 
-      <label for="Address">Address:</label>
-      <input type="text" id="Address" name="Address" required>
-      <br>
-     
-      <button type="button" onclick="saveaddress()">Save details</button>
-      <br>
- </form>
- <p id="result"></p>
+        <label for="Address">Address:</label>
+        <input type="text" id="Address" name="Address" required>
+        <br>
 
+        <button type="button" onclick="saveaddress()">Save details</button>
+        <br />
+        ----------------------------------------------<br>
+    </form>
+    <div id="data"></div>
+    <div id="response"></div>
+    <!--<p id="result"></p>-->
+    <p>
+        2. விற்பனை விவரம்
+    </p>
+    <p style="height: 12px">
+        ---------------------------------------------</p>
+    <form id="saledetails">
+        <p> கீழே உள்ள option இல் ஒன்றைத் தேர்ந்தெடு </p>
+        <!-- Radio button for Silver -->
+        <label for="Gold">Gold:</label>
+        <input type="radio" name="metal" value="Gold" required>
+        <!-- Radio button for Gold -->
+        <label for="Silver">Silver:</label>
+        <input type="radio" name="metal" value="Silver" required>
+        <!-- List box to be populated dynamically -->
+        <select id="itemList" name="itemList">
+            <br>
+    </form>
     <script src="static/gmath.js"></script>
-
+    <script src="static/fn_populatemetallist.js"></script>
+    <script src="static/evnthand_populatemetallist.js"></script>
 </body>
+
 </html>

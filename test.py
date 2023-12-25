@@ -1,23 +1,16 @@
-from turtle import delay
 from flask import Flask, render_template, request, jsonify
 import json
 import webbrowser
-# import os
-# import sys
 
 app = Flask(__name__)
 
 # Index route
-
-
 @app.route('/')
 def index():
     return render_template('Gmath.html')
 
-
 def open_browser():
     webbrowser.open('http://localhost:5000/')
-
 
 @app.route('/submit', methods=['POST'])
 def submit():
@@ -34,8 +27,7 @@ def submit():
         print('Error writing to file:', e)
         return jsonify({'success': False, 'error': 'Internal Server Error'}), 500
 
-
 # Run the Flask app
 if __name__ == '__main__':
-    open_browser()
-    app.run(debug=True,use_reloader=False)
+    open_browser()  # Call open_browser() only once
+    app.run(debug=True)

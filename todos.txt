@@ -1,5 +1,5 @@
 1. Customer ID generation
 2. Form save to file thats support excel
-3. Style CSS ~ attractive
+3. Style CSS ~ attractive form design
 4. Convert to bill and print
 5. Search back the saved results
